@@ -1,0 +1,24 @@
+{
+	"name": "logify",
+	"version": "0.0.0",
+	"private": true,
+	"license": "MIT",
+	"scripts": {
+		"build": "turbo run build",
+		"dev": "docker compose up postgres -d && turbo run dev",
+		"start": "turbo run start",
+		"prepare": "turbo run prepare"
+	},
+	"workspaces": [
+		"apps/*",
+		"packages/*"
+	],
+	"devDependencies": {
+		"turbo": "^1.4.2"
+	},
+	"engines": {
+		"npm": ">=7.0.0",
+		"node": ">=14.0.0"
+	},
+	"packageManager": "yarn@1.22.19"
+}

@@ -1,0 +1,22 @@
+{
+	"name": "req-validator",
+	"version": "0.0.0",
+	"private": true,
+	"license": "UNLICENSED",
+	"main": ".build/index.js",
+	"scripts": {
+		"build": "tsc -p ."
+	},
+	"dependencies": {
+		"@joi/date": "^2.1.0",
+		"joi": "^17.6.0",
+		"luxon": "^3.0.1"
+	},
+	"devDependencies": {
+		"@types/express": "^4.17.13",
+		"@types/luxon": "^3.0.0",
+		"@types/node": "^18.7.1",
+		"tsconfig": "*",
+		"typescript": "^4.7.4"
+	}
+}

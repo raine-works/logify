@@ -1,0 +1,22 @@
+{
+	"name": "models",
+	"version": "0.0.0",
+	"private": true,
+	"license": "UNLICENSED",
+	"main": ".build/index.js",
+	"scripts": {
+		"build": "tsc -p ."
+	},
+	"dependencies": {
+		"luxon": "^3.0.1",
+		"pg": "^8.7.3",
+		"pg-hstore": "^2.3.4",
+		"sequelize": "^6.21.3"
+	},
+	"devDependencies": {
+		"@types/luxon": "^3.0.0",
+		"@types/node": "^18.7.1",
+		"tsconfig": "*",
+		"typescript": "^4.7.4"
+	}
+}

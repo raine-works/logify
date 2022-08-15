@@ -1,0 +1,18 @@
+{
+	"name": "helpers",
+	"version": "0.0.0",
+	"private": true,
+	"license": "UNLICENSED",
+	"main": ".build/index.js",
+	"scripts": {
+		"build": "tsc -p ."
+	},
+	"dependencies": {
+		"lodash": "^4.17.21"
+	},
+	"devDependencies": {
+		"@types/jest": "^28.1.6",
+		"@types/lodash": "^4.14.182",
+		"tsconfig": "*"
+	}
+}
