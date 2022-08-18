@@ -1,6 +1,6 @@
 import { Sequelize, DataTypes, ModelStatic, Model } from 'sequelize'
 import { DateTime } from 'luxon'
-import { EventEmitter } from 'stream'
+import { EventEmitter } from 'node:events'
 
 export const sqlEvent = new EventEmitter()
 

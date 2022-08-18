@@ -1,4 +1,4 @@
-import { EventEmitter } from 'stream'
+import { EventEmitter } from 'node:events'
 import express, { Request, Response } from 'express'
 import expressWs from 'express-ws'
 import cors from 'cors'

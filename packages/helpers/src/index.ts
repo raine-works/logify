@@ -39,7 +39,7 @@ export const getCliArguments = (exp: Array<string> | '*' = '*'): Args => {
 }
 
 /**
- * @param req Array of string to specify which additional arguments are required.
+ * @param req List of additional arguments that are required.
  * @param args Object of key value pairs to check for required arguments.
  * @returns Boolean
  */
@@ -56,8 +56,27 @@ export const hasReqArguments = (req: Array<string>, args: Args): boolean => {
 	return hasAllKeys
 }
 
-export const setEnvs = (envs: Array<string>, args: Args) => {
+/**
+ * @param envs Array of environment variables to update.
+ * @param args Object of key value pairs to check for required arguments.
+ * @return void
+ */
+export const setEnvs = (envs: Array<string>, args: Args): void => {
 	for (const e of envs) {
 		process.env[e.toUpperCase()] = args[e] ?? process.env[e.toUpperCase()]
 	}
+}
+
+/**
+ *
+ * @param domain fully qualified domain name. example.com
+ * @param subDomain sub domain. www
+ * @returns complete url. https://example.com or http://localhost
+ */
+export const getUrl = (domain: string, subDomain?: string, port?: number) => {
+	const hostname = process.env.STAGE === 'PROD' ? domain : 'localhost'
+	const prtcl = process.env.STAGE === 'PROD' ? 'https://' : 'http://'
+	return `${prtcl}${subDomain ? subDomain + '.' : ''}${hostname}${
+		port ? ':' + port : ''
+	}`
 }
